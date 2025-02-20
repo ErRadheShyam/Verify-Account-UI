@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verify Your Account</title>
+    <style>
+        /* Reset basic elements */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Body styling with gradient background */
+        body {
+            background: linear-gradient(to bottom right, #e0eafc, #cfdef3); /* Modern gradient */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden; /* Prevent scrollbars for animation */
+        }
+
+        /* Card layout styling */
+        .card {
+            background-color: #fff;
+            max-width: 400px;
+            width: 90%;
+            padding: 2.5rem; /* Increased padding */
+            border-radius: 12px; /* More rounded corners */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Softer shadow */
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+        }
+
+        .card:hover {
+            transform: translateY(-5px); /* Lift on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+        }
+
+        /* Logo styling */
+        .logo {
+            width: 120px; /* Slightly larger logo */
+            margin: 0 auto 1.5rem;
+            display: block; /* Ensures proper centering */
+            animation: fadeIn 1s ease-in-out; /* Logo fade-in animation */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+
+        /* Headline and paragraph styling */
+        h1 {
+            font-size: 1.8rem; /* Larger heading */
+            margin-bottom: 0.75rem;
+            color: #333;
+            font-weight: 600; /* Semi-bold heading */
+        }
+
+        p {
+            margin-bottom: 2rem;
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.6; /* Improved readability */
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #444;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ced4da; /* Lighter border */
+            border-radius: 6px; /* More rounded input */
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            box-sizing: border-box; /* Include padding in width */
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #80bdff; /* Highlight on focus */
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Subtle focus ring */
+        }
+
+        /* Verify button styling */
+        .verify-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 1rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .verify-button:hover {
+            background-color: #0069d9;
+        }
+
+        .verify-button:active { /* Add a pressed state */
+            background-color: #0056b3;
+            transform: translateY(1px); /* Slightly move button down */
+            box-shadow: none;
+        }
+
+        /* Resend link styling */
+        .resend-link {
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .resend-link:hover {
+            color: #0056b3;
+            text-decoration: underline; /* Add underline on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="your-logo.png" alt="Logo" class="logo" />  <h1>Verify Your Account</h1>
+        <p>Enter the code sent to your email to verify your account.</p>
+        <form>
+            <label for="verification-code">Verification Code</label>
+            <input type="text" id="verification-code" name="verification-code" maxlength="6" placeholder="Enter 6-digit code" aria-describedby="codeHelp" />
+            <button type="submit" class="verify-button">Verify</button>
+        </form>
+        <a href="#" class="resend-link">Resend Code</a>
+    </div>
+</body>
+</html>
